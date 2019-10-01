@@ -75,7 +75,7 @@ export default class Main extends Component {
 
           <SubmitButton loading={loading}>
             {loading ? (
-              <FaSpinner color="fff" size={14} />
+              <FaSpinner color="#fff" size={14} />
             ) : (
               <FaPlus color="#FFF" size={14} />
             )}
