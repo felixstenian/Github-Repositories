@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import { FaSpinner } from 'react-icons/fa';
 import PropTypes from 'prop-types';
 import api from '../../services/api';
 
-// import { Container } from './styles';
+import { Loading } from './styles';
 
 export default class Repository extends Component {
   static propTypes = {
@@ -39,13 +40,18 @@ export default class Repository extends Component {
       issues: issues.data,
       loading: false,
     });
-
-    console.log(repository);
-    console.log(issues);
   }
 
   render() {
     const { repository, issues, loading } = this.state;
+
+    if (loading) {
+      return (
+        <Loading>
+          <FaSpinner />
+        </Loading>
+      );
+    }
 
     return <h1>Repository</h1>;
   }
