@@ -2,7 +2,7 @@
 
 <h1>Desafio 05. Aplicação com ReactJS</h1>
 
-- [ ] Captando erros;
+- [x] Captando erros;
 
   > Adicione um try/catch por volta do código presente na função handleSubmit presente no componente Main e caso um repositório não seja encontrado na API do Github adicione uma borda vermelha por volta do input em que o usuário digitou o nome do repositório.
 
