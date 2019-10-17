@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import api from '../../services/api';
 
 import Container from '../../components/Container';
-import { Loading, Owner, IssueList, Select, FilterIssues, Pagination } from './styles';
+import { Loading, Owner, IssueList, FilterIssues, Pagination } from './styles';
 
 export default class Repository extends Component {
   static propTypes = {
@@ -63,11 +63,10 @@ export default class Repository extends Component {
         state: filters[filterIndex].state,
         per_page: 5,
         page,
-      }
+      },
     });
     this.setState({ issues: response.data });
   };
-
 
   selectFilter = async filterIndex => {
     await this.setState({ filterIndex });
@@ -89,7 +88,7 @@ export default class Repository extends Component {
       loading,
       filters,
       filterIndex,
-      page
+      page,
     } = this.state;
 
     if (loading) {
