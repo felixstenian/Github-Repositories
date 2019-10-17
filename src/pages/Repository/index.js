@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import api from '../../services/api';
 
 import Container from '../../components/Container';
-import { Loading, Owner, IssueList, Select, FilterIssues, Page } from './styles';
+import { Loading, Owner, IssueList, Select, FilterIssues, Pagination } from './styles';
 
 export default class Repository extends Component {
   static propTypes = {
@@ -136,6 +136,19 @@ export default class Repository extends Component {
             </li>
           ))}
         </IssueList>
+        <Pagination>
+          <button
+            type="button"
+            disabled={page < 2}
+            onClick={() => this.handlePage('back')}
+          >
+            Anterior
+          </button>
+          <span>Página {page}</span>
+          <button type="button" onClick={() => this.handlePage('next')}>
+            Próximo
+          </button>
+        </Pagination>
       </Container>
     );
   }
