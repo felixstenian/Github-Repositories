@@ -111,3 +111,39 @@ export const IssueList = styled.ul`
     }
   }
 `;
+
+export const Select = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+  margin-top: -20px;
+
+  select {
+    width: 150px;
+    height: 25px;
+    background: #eee;
+    border: 0;
+    margin-top: 10px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+`;
+
+export const FilterIssues = styled.ul`
+  display: flex;
+  justify-content: center;
+  padding-bottom: 15px;
+  button {
+    border-radius: 4px;
+    outline: 0;
+    border: 0;
+    padding: 8px;
+    margin: 0 0.25rem;
+
+    &:nth-child(${props => props.active + 1}) {
+      background: #7159c1;
+      color: #fff;
+    }
+  }
+`;
