@@ -11,7 +11,7 @@
   > Antes de fazer a chamada à API na função handleSubmit faça uma verificação para ver se o repositório não está duplicado, ou seja, se ele ainda não existe no estado de repositories.
   > Caso exista, dispare um erro, e com isso o código cairá no catch do try/catch criado na funcionalidade anterior.
 
-- [ ] Filtro de estado;
+- [x] Filtro de estado;
 
   > Adicione um filtro de estado na listagem de Issues que criamos no detalhe do repositório. O estado representa se a issue está em aberto, fechada ou uma opção para exibir todas.
 
